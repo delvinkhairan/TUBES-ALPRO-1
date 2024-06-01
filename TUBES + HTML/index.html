@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SEA GAMES MANAGER</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<div class="navbar">
+    <h1>Daftar Negara</h1>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/add">Tambah Negara</a>
+        <a href="/edit">Edit Negara</a>
+        <a href="/delete">Hapus Negara</a>
+        <a href="/ranking">Urutkan Peringkat Berdasarkan Medali</a>
+        <a href="/search">Cari Negara Dari Peringkat</a>
+        <a href="/sort">Urutkan Negara Berdasarkan Alphabet</a>
+    </nav>
+</div>
+<div class="container">
+    <h2>Daftar Negara Berdasarkan Alphabet</h2>
+    <table>
+        <tr>
+            <th>Nama Negara</th>
+            <th>Jumlah Emas</th>
+            <th>Jumlah Perak</th>
+            <th>Jumlah Perunggu</th>
+        </tr>
+        {{range .}}
+        <tr>
+            <td>{{.Nama}}</td>
+            <td>{{.JumlahEmas}}</td>
+            <td>{{.JumlahPerak}}</td>
+            <td>{{.JumlahPerunggu}}</td>
+        </tr>
+        {{end}}
+    </table>
+</div>
+</body>
+</html>
